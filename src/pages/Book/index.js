@@ -23,11 +23,11 @@ const Book = () => {
           <div className="wrapper">
             {data.map((book) => (
               <div key={book.id} className="cart">
-                <div className="cart-title">
-                  <h2>{book.title}</h2>
-                </div>
                 <div className="cart-image">
                   <img src={book.avatar} alt="" />
+                </div>
+                <div className="cart-title">
+                  <h2>{book.title}</h2>
                 </div>
                 <div className="cart-name">
                   <p>{book.name}</p>
