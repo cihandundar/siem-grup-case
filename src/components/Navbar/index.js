@@ -30,10 +30,10 @@ const Sidebar = () => {
               <NavLink to="/">Home</NavLink>
             </li>
             <li className="nav-list-link">
-              <NavLink to="/post">Post</NavLink>
+              <NavLink to="/post">Book</NavLink>
             </li>
             <li className="nav-list-link">
-              <NavLink to="/addpost">Add Post</NavLink>
+              <NavLink to="/addpost">Add Book</NavLink>
             </li>
 
             <li className="nav-list-link">
