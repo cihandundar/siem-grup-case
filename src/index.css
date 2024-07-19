@@ -6,13 +6,18 @@
   font-family: "Roboto Condensed", sans-serif;
 }
 
+body {
+  background-color: #000;
+  color: #fff;
+}
+
 li {
   list-style-type: none;
 }
 
 a {
   text-decoration: none;
-  color: #000;
+  color: #fff;
 }
 
 /* NAVBAR CSS */
@@ -22,14 +27,6 @@ a {
   justify-content: space-between;
   margin: 0 auto;
   max-width: 1200px;
-}
-
-.nav-logo {
-  width: 200px;
-}
-
-.nav-logo > a > img {
-  width: 100%;
 }
 
 .nav-list {
@@ -60,6 +57,42 @@ h1 {
   text-align: center;
   width: 30%;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+/* SIGN IN - SIGN UP CSS */
+
+.register {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.form-group {
+  margin-top: 15px;
+}
+
+.form-control {
+  width: 300px;
+  height: 45px;
+  padding: 10px;
+  outline: none;
+  border: none;
+  background-color: #000;
+  border-bottom: 2px solid #fff;
+  color: #fff;
+  font-size: 18px;
+}
+
+.form-control::placeholder {
+  color: #fff;
+}
+
+.form-group > button {
+  width: 100%;
+  height: 45px;
 }
 
 /* LOADING SPINNER CSS */
