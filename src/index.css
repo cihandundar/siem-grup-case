@@ -50,6 +50,7 @@ h1 {
 .wrapper {
   padding-block: 20px;
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
 }
 
@@ -61,12 +62,11 @@ h1 {
   align-items: center;
   flex-direction: column;
   justify-content: center;
-  width: 30%;
-  height: 300px;
+  width: 25%;
 }
 
 .cart-image {
-  width: 150px;
+  width: 200px;
 }
 
 .cart-image > img {

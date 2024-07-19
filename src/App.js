@@ -55,10 +55,10 @@ function App() {
       <Navbar />
       <Routes>
         {route.map((route, index) => {
-          if (route.routes) {
+          if (route?.routes) {
             return (
               <Route element={route.element} key={index}>
-                {route.routes.map((subRoute, subIndex) => (
+                {route?.routes?.map((subRoute, subIndex) => (
                   <Route
                     element={subRoute.element}
                     path={subRoute.path}
@@ -69,7 +69,7 @@ function App() {
             );
           }
           return (
-            <Route key={index} path={route.path} element={route.element} />
+            <Route key={index} path={route.path} element={route?.element} />
           );
         })}
       </Routes>

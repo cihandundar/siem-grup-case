@@ -14,7 +14,6 @@ const Book = () => {
     <section>
       <div className="container">
         <h1>Book List</h1>
-
         {isLoading ? (
           <div className="loading">
             <span className="loader"></span>
@@ -27,7 +26,7 @@ const Book = () => {
                   <img src={book.avatar} alt="" />
                 </div>
                 <div className="cart-title">
-                  <h2>{book.title}</h2>
+                  <h3>{book.title}</h3>
                 </div>
                 <div className="cart-name">
                   <p>{book.name}</p>
