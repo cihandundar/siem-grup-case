@@ -2,8 +2,8 @@ import { Navbar } from "./components";
 import { SignIn, SignUp } from "./pages";
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-// import { ToastContainer } from "react-toastify";
-// import "react-toastify/dist/ReactToastify.css";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import PrivateRoute from "./components/PrivateRoute";
 import Error from "./pages/Error";
 import { AddBook, Book, BookDetails, EditBook, Home } from "./pages";
@@ -21,10 +21,7 @@ function App() {
       path: "*",
       element: <Error />,
     },
-    {
-      path: "/book",
-      element: <Book />,
-    },
+
     {
       element: <PrivateRoute />,
       routes: [
@@ -32,7 +29,10 @@ function App() {
           path: "/",
           element: <Home />,
         },
-
+        {
+          path: "/book",
+          element: <Book />,
+        },
         {
           path: "/book/:id",
           element: <BookDetails />,
@@ -51,7 +51,7 @@ function App() {
 
   return (
     <BrowserRouter>
-      {/* <ToastContainer position="top-right" /> */}
+      <ToastContainer position="top-right" />
       <Navbar />
       <Routes>
         {route.map((route, index) => {
