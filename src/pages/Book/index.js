@@ -23,7 +23,7 @@ const Book = () => {
             {data.map((book) => (
               <div key={book.id} className="cart">
                 <div className="cart-image">
-                  <img src={book.avatar} alt="" />
+                  <img src={book.imageURL || book.avatar} alt={book.title} />
                 </div>
                 <div className="cart-title">
                   <h3>{book.title}</h3>

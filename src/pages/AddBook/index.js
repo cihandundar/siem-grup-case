@@ -7,11 +7,12 @@ const AddBook = () => {
   const dispatch = useDispatch();
   const [name, setName] = useState("");
   const [title, setTitle] = useState("");
+  const [imageURL, setImageURL] = useState("");
   const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const body = { name, title };
+    const body = { name, title, imageURL };
     dispatch(addNewBook(body));
     setTimeout(() => {
       navigate("/book");
@@ -41,6 +42,15 @@ const AddBook = () => {
               type="text"
               value={title}
               onChange={(e) => setTitle(e.target.value)}
+            />
+          </div>
+          <div className="container-item">
+            <label>Image URL</label>
+            <input
+              type="text"
+              value={imageURL}
+              required
+              onChange={(e) => setImageURL(e.target.value)}
             />
           </div>
           <button>Add Blog</button>
