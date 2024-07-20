@@ -38,7 +38,7 @@ function App() {
           element: <BookDetails />,
         },
         {
-          path: "/editbook/:postId",
+          path: "/editbook/:bookId",
           element: <EditBook />,
         },
         {
