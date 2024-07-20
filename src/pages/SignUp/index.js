@@ -63,61 +63,57 @@ const SignUp = () => {
         </div>
       ) : (
         <div className="register-container">
-          <div className="right">
-            <div>
-              <h1>Create account</h1>
-            </div>
-            <div>
-              <form onSubmit={onSubmit} className="form">
-                <div className="form-group">
-                  <input
-                    type="text"
-                    className="form-control"
-                    id="userName"
-                    name="userName"
-                    value={userName}
-                    placeholder="Enter name"
-                    onChange={onChange}
-                  />
-                </div>
-                <div className="form-group">
-                  <input
-                    type="email"
-                    className="form-control"
-                    id="email"
-                    name="email"
-                    value={email}
-                    placeholder="Email"
-                    onChange={onChange}
-                  />
-                </div>
-                <div className="form-group">
-                  <input
-                    type="password"
-                    className="form-control"
-                    id="password"
-                    name="password"
-                    value={password}
-                    placeholder="Password"
-                    onChange={onChange}
-                  />
-                </div>
-                <div className="form-group">
-                  <input
-                    type="password"
-                    className="form-control"
-                    id="passwordControl"
-                    name="passwordControl"
-                    value={passwordControl}
-                    placeholder="Re-enter password"
-                    onChange={onChange}
-                  />
-                </div>
-                <div className="form-group">
-                  <button type="submit">Sign up</button>
-                </div>
-              </form>
-            </div>
+          <h1>Create account</h1>
+          <div>
+            <form onSubmit={onSubmit} className="form">
+              <div className="form-group">
+                <input
+                  type="text"
+                  className="form-control"
+                  id="userName"
+                  name="userName"
+                  value={userName}
+                  placeholder="Enter name"
+                  onChange={onChange}
+                />
+              </div>
+              <div className="form-group">
+                <input
+                  type="email"
+                  className="form-control"
+                  id="email"
+                  name="email"
+                  value={email}
+                  placeholder="Email"
+                  onChange={onChange}
+                />
+              </div>
+              <div className="form-group">
+                <input
+                  type="password"
+                  className="form-control"
+                  id="password"
+                  name="password"
+                  value={password}
+                  placeholder="Password"
+                  onChange={onChange}
+                />
+              </div>
+              <div className="form-group">
+                <input
+                  type="password"
+                  className="form-control"
+                  id="passwordControl"
+                  name="passwordControl"
+                  value={passwordControl}
+                  placeholder="Re-enter password"
+                  onChange={onChange}
+                />
+              </div>
+              <div className="form-group">
+                <button type="submit">Sign up</button>
+              </div>
+            </form>
           </div>
         </div>
       )}

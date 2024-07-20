@@ -56,40 +56,36 @@ const SignIn = () => {
         </div>
       ) : (
         <div className="register-container">
-          <div className="right">
-            <div>
-              <h1>Sign In</h1>
-            </div>
-            <div>
-              <form onSubmit={onSubmit} className="form">
-                <div className="form-group">
-                  <input
-                    type="email"
-                    className="form-control"
-                    id="email"
-                    name="email"
-                    value={email}
-                    placeholder="Email"
-                    onChange={onChange}
-                  />
-                </div>
-                <div className="form-group">
-                  <input
-                    type="password"
-                    className="form-control"
-                    id="password"
-                    name="password"
-                    value={password}
-                    placeholder="Password"
-                    onChange={onChange}
-                  />
-                </div>
+          <h1>Sign In</h1>
+          <div>
+            <form onSubmit={onSubmit} className="form">
+              <div className="form-group">
+                <input
+                  type="email"
+                  className="form-control"
+                  id="email"
+                  name="email"
+                  value={email}
+                  placeholder="Email"
+                  onChange={onChange}
+                />
+              </div>
+              <div className="form-group">
+                <input
+                  type="password"
+                  className="form-control"
+                  id="password"
+                  name="password"
+                  value={password}
+                  placeholder="Password"
+                  onChange={onChange}
+                />
+              </div>
 
-                <div className="form-group">
-                  <button type="submit">Sign in</button>
-                </div>
-              </form>
-            </div>
+              <div className="form-group">
+                <button type="submit">Sign in</button>
+              </div>
+            </form>
           </div>
         </div>
       )}
