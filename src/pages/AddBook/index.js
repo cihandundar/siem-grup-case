@@ -22,9 +22,7 @@ const AddBook = () => {
   return (
     <section className="section">
       <div className="section-container">
-        <div className="section-container-title">
-          <h2>Add Post</h2>
-        </div>
+        <h1>Add Post</h1>
         <form onSubmit={handleSubmit}>
           <div className="container-item">
             <label>Author</label>
@@ -37,7 +35,7 @@ const AddBook = () => {
           </div>
           <div className="container-item">
             <label>Name</label>
-            <textarea
+            <input
               required
               type="text"
               value={title}
@@ -53,7 +51,7 @@ const AddBook = () => {
               onChange={(e) => setImageURL(e.target.value)}
             />
           </div>
-          <button>Add Blog</button>
+          <button className="add-btn">Add Blog</button>
         </form>
       </div>
     </section>
