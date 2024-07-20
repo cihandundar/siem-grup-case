@@ -9,7 +9,7 @@ const initialState = {
   error: "",
 };
 
-// BOOK API ISTEGI
+// KITAP API ISTEGI
 export const fetchBook = createAsyncThunk("fetchBook", async () => {
   const response = await axios.get(
     "https://64542599c18adbbdfeb058b1.mockapi.io/posts"
@@ -17,7 +17,7 @@ export const fetchBook = createAsyncThunk("fetchBook", async () => {
   return response.data;
 });
 
-// BOOK DETAY SAYFASI
+// KITAP DETAY SAYFASI
 export const fetchBookDetails = createAsyncThunk(
   "books/fetchBookDetails",
   async (id) => {

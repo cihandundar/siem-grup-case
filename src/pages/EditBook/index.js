@@ -12,7 +12,9 @@ const EditBook = () => {
   const [title, setTitle] = useState("");
   const [imageURL, setImageURL] = useState("");
 
-  const bookDetails = useSelector((state) => state.books.details);
+  const bookDetails = useSelector((state) => state?.books?.details);
+
+  console.log(bookDetails, " asdaasd");
 
   useEffect(() => {
     dispatch(fetchBookDetails(bookId));
@@ -29,24 +31,27 @@ const EditBook = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     const body = { name, title, imageURL };
-    dispatch(editBook({ id: bookId, body }));
-    setTimeout(() => {
-      navigate("/book");
-    }, 2000);
+    dispatch(editBook({ id: bookId, body })).then(() => {
+      setTimeout(() => {
+        navigate("/book");
+      }, 2000);
+    });
   };
 
   return (
     <section className="section">
       <div className="section-container">
-        <h1>Edit Book</h1>
+        <div className="section-container-title">
+          <h2>Edit Book</h2>
+        </div>
         <div className="container">
           <form onSubmit={handleSubmit}>
             <div className="container-item">
               <label>Author</label>
               <input
                 type="text"
-                value={name}
-                onChange={(e) => setName(e.target.value)}
+                value={title}
+                onChange={(e) => setTitle(e.target.value)}
                 required
               />
             </div>
@@ -54,8 +59,8 @@ const EditBook = () => {
               <label>Name</label>
               <input
                 type="text"
-                value={title}
-                onChange={(e) => setTitle(e.target.value)}
+                value={name}
+                onChange={(e) => setName(e.target.value)}
                 required
               />
             </div>
