@@ -14,8 +14,6 @@ const EditBook = () => {
 
   const bookDetails = useSelector((state) => state?.books?.details);
 
-  console.log(bookDetails, " asdaasd");
-
   useEffect(() => {
     dispatch(fetchBookDetails(bookId));
   }, [dispatch, bookId]);
