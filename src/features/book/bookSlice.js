@@ -21,7 +21,7 @@ export const fetchBook = createAsyncThunk("fetchBook", async () => {
 export const fetchBookDetails = createAsyncThunk(
   "books/fetchBookDetails",
   async (id) => {
-    const response = await axios.get(
+    const response = await axios?.get(
       `https://64542599c18adbbdfeb058b1.mockapi.io/posts/${id}`
     );
     return response.data;
@@ -114,7 +114,7 @@ export const bookSlice = createSlice({
       state.isLoading = true;
     });
     builder.addCase(handleDelete.fulfilled, (state, action) => {
-      state.data = state.data.filter((book) => book.id !== action.payload);
+      state.data = state?.data?.filter((item) => item?.id !== action.payload);
       state.isLoading = false;
     });
     builder.addCase(handleDelete.rejected, (state, action) => {
