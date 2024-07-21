@@ -61,6 +61,7 @@ const SignIn = () => {
             <form onSubmit={onSubmit} className="form">
               <div className="form-group">
                 <input
+                  required
                   type="email"
                   className="form-control"
                   id="email"
@@ -72,6 +73,7 @@ const SignIn = () => {
               </div>
               <div className="form-group">
                 <input
+                  required
                   type="password"
                   className="form-control"
                   id="password"

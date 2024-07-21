@@ -68,6 +68,7 @@ const SignUp = () => {
             <form onSubmit={onSubmit} className="form">
               <div className="form-group">
                 <input
+                  required
                   type="text"
                   className="form-control"
                   id="userName"
@@ -79,6 +80,7 @@ const SignUp = () => {
               </div>
               <div className="form-group">
                 <input
+                  required
                   type="email"
                   className="form-control"
                   id="email"
@@ -90,6 +92,7 @@ const SignUp = () => {
               </div>
               <div className="form-group">
                 <input
+                  required
                   type="password"
                   className="form-control"
                   id="password"
@@ -101,6 +104,7 @@ const SignUp = () => {
               </div>
               <div className="form-group">
                 <input
+                  required
                   type="password"
                   className="form-control"
                   id="passwordControl"
