@@ -7,24 +7,16 @@ const Home = () => {
       <div className="container">
         <Link
           style={{
-            position: "absolute",
             padding: "10px 30px",
             backgroundColor: "red",
-            zIndex: "1",
-            left: "50%",
-            top: "50%",
-            transform: "translateX(-50%)",
             color: "#fff",
+            paddingBottom: "20px",
           }}
           to="/book"
         >
           Go Book List
         </Link>
-        <img
-          style={{ width: "100%", position: "relative" }}
-          src={hero}
-          alt=""
-        />
+        <img style={{ width: "100%", marginTop: "30px" }} src={hero} alt="" />
       </div>
     </section>
   );

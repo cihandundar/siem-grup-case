@@ -35,7 +35,7 @@ export const addNewBook = createAsyncThunk("books/addNewBook", async (body) => {
       `https://64542599c18adbbdfeb058b1.mockapi.io/posts`,
       body
     );
-    toast.success("Book added successfully");
+
     return response.data;
   } catch (error) {
     console.error("Error adding new book: ", error.message);
@@ -49,7 +49,7 @@ export const handleDelete = createAsyncThunk("books/deleteBook", async (id) => {
     await axios.delete(
       `https://64542599c18adbbdfeb058b1.mockapi.io/posts/${id}`
     );
-    toast.error("Book deleted successfully");
+
     return id;
   } catch (error) {
     console.error("Error deleting user: ", error.message);
@@ -105,6 +105,7 @@ export const bookSlice = createSlice({
     builder.addCase(addNewBook.fulfilled, (state, action) => {
       state.data = [...state.data, action.payload];
       state.isLoading = false;
+      toast.success("Book added successfully");
     });
     builder.addCase(addNewBook.rejected, (state, action) => {
       state.error = action.error.message;
@@ -116,6 +117,7 @@ export const bookSlice = createSlice({
     builder.addCase(handleDelete.fulfilled, (state, action) => {
       state.data = state?.data?.filter((item) => item?.id !== action.payload);
       state.isLoading = false;
+      toast.error("Book deleted successfully");
     });
     builder.addCase(handleDelete.rejected, (state, action) => {
       state.error = action.error.message;
@@ -130,6 +132,7 @@ export const bookSlice = createSlice({
       );
       state.data = updatedData;
       state.isLoading = false;
+      toast.success("Book edited successfully");
     });
     builder.addCase(editBook.rejected, (state, action) => {
       state.error = action.error.message;
